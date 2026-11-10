@@ -1,0 +1,22 @@
+# Accepted risks from the pre-open-source security review (security-pre-open-source skill 0.2.2).
+- id: SEC-007
+  finding: "Author names in the README citation (README.md, BibTeX author field)"
+  severity: MEDIUM
+  rationale: "Public authorship of the arXiv paper; names only, no contact details"
+  approved_by: "Kaiwen Zhou"
+  approved_on: 2026-10-01
+  expires: 2027-10-01
+- id: SEC-003
+  finding: "Successor-written code runs in a subprocess without network or filesystem isolation (rsi_bench.evals.cot_insertion.run_code_probe)"
+  severity: HIGH
+  rationale: "Scoring runs only in disposable isolated sandboxes (documented in SECURITY.md); the probe already has CPU/memory/file/process limits, an empty environment and a throwaway cwd"
+  approved_by: "Kaiwen Zhou"
+  approved_on: 2026-10-01
+  expires: 2027-10-01
+- id: SEC-004
+  finding: "Modal images keep vLLM 0.25.1 / torch 2.11 (published CVEs); uv.lock keeps setuptools 80.10.2 (vLLM caps it below 81)"
+  severity: HIGH
+  rationale: "The Modal images are the paper's experiment environment and are kept for reproducibility; their transformers already has the checkpoint-loading fixes and vLLM only listens on localhost inside the sandbox. The setuptools advisories affect building sdists with setuptools, which this project does not do (hatchling); vLLM 0.32 still requires setuptools<81, so it is upgraded once vLLM lifts the cap. As of 2026-10-29 setuptools is the only package in uv.lock with an open OSV advisory. Documented in SECURITY.md"
+  approved_by: "Kaiwen Zhou"
+  approved_on: 2026-10-01
+  expires: 2027-10-01

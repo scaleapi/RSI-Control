@@ -1,0 +1,22 @@
+name: TruffleHog Secret Scan
+
+on:
+  pull_request:
+    branches: [master, main]
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      # Scans the commits between the PR's base and head.
+      - uses: trufflesecurity/trufflehog@31ce31ee1abbcc7dc8eee5764c17121c3044c8b2 # v3.99.7
+        with:
+          version: 3.99.7
+          extra_args: --results=verified,unknown
