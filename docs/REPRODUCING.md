@@ -40,8 +40,10 @@ export RSI_HOME=~/rsi           # machine-local root: external clones, gated dat
 uv run pytest -q                # CPU-only unit tests, no API calls
 ```
 
-The monitors use the monitor scaffold of [aisa-group/ResearchArena](https://github.com/aisa-group/ResearchArena)
-(pinned at `58776e0`), cloned under `$RSI_HOME/external/`:
+The paper's monitors need nothing beyond this. Only the optional agentic monitor
+(`run_monitor.py --monitor-style agent`, not used in the paper) runs on the monitor scaffold of
+[aisa-group/ResearchArena](https://github.com/aisa-group/ResearchArena) (pinned at `58776e0`). To use it,
+clone it under `$RSI_HOME/external/`:
 
 ```bash
 mkdir -p $RSI_HOME/external && cd $RSI_HOME/external
