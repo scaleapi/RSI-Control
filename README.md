@@ -1,6 +1,6 @@
 # RSI Control Arena
 
-Code and data for **RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?**
+Code and data for **[RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?](https://arxiv.org/abs/2610.27735)**
 
 In this testbed, a frontier model works as an autonomous AI R&D agent. It gets a benign **main task**
 from one stage of a successor model's training pipeline: data curation, supervised fine-tuning,
@@ -79,10 +79,10 @@ Code: MIT (see `LICENSE`). Data: see [data/DATA_LICENSES.md](data/DATA_LICENSES.
 ## Citation
 
 ```bibtex
-@article{zhou2026rsicontrol,
-  title  = {RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?},
-  author = {Zhou, Kaiwen and Sehwag, Udari Madhushani},
-  year   = {2026},
-  note   = {arXiv preprint (link to be added)}
+@article{zhou2026rsi,
+  title={RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?},
+  author={Zhou, Kaiwen and Sehwag, Udari Madhushani},
+  journal={arXiv preprint arXiv:2610.27735},
+  year={2026}
 }
 ```
