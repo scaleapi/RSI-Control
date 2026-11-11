@@ -7,8 +7,7 @@
 # RUN_LIST: run ids (one per line) for the transcript scope. COT_RUN_LIST (default RUN_LIST) for the CoT scope --
 # pass the GLM + grok subset there, the only agents whose reasoning reaches the transcript. SINCE: the sweep's
 # stamp (its LOGDIR/SINCE). Writes monitor_{3mon_S2,sol}_single_{transcript,cot}_<TAG>.json under $OUT_DIR
-# (default $RSI_HOME/results/monitor/formal), the input of pool_monitor_reports.py. Needs the ResearchArena
-# clone (RSI_RESEARCH_ARENA, default $RSI_HOME/external/ResearchArena).
+# (default $RSI_HOME/results/monitor/formal), the input of pool_monitor_reports.py.
 set -u
 cd "$(dirname "$0")/../.." || exit 1
 OUT_DIR="${OUT_DIR:-${RSI_HOME:-$HOME/rsi}/results/monitor/formal}"; mkdir -p "$OUT_DIR"

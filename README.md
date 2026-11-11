@@ -70,7 +70,7 @@ treat results on such models accordingly.
 ## Built on
 
 - [PostTrainBench](https://github.com/aisa-group/PostTrainBench) (MIT): the post-training task framing, container and evaluation scripts, adapted with attribution. See `NOTICE`.
-- [ResearchArena](https://github.com/aisa-group/ResearchArena): the monitor scaffold.
+- [ResearchArena](https://github.com/aisa-group/ResearchArena): the scored-concealment framing of the attack prompt (`attack_preamble_scored.txt`).
 
 ## License
 
